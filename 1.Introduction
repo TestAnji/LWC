@@ -27,6 +27,42 @@ How the component look like                 Tag that is defined in the HTML     
                           <template>
 
                           </template>
-8. LWC 
+8. The basic code which is present in the Javascript file is 
+
+    import { lightningElement } from 'lwc';
+
+    export default class lightingComponentName extends LightingElement{
+
+    }
+9. Once you write the logic inside your LWC component of any file, you will see an dot next to your lwc component name which means your code is not saved in your
+  VS code editor. So, In order to save click ctrl + S.
+
+10. In order to deploy this code into the salesforce org, we need to right click on any of the files and then click on "deploy source to Org"
+
+11.We need to modify bit of code on to the XML file and those are listed below.
+          <isExposed>false</isExposed> ==> This means the LWC component is not available to use in the salesforce org, In order to make it visible to the salesforce
+                                          org we need to make it to true.
+          <isExposed>true</isExposed>
+
+          We need to specify, the newly created LWC component, where it can be used.
+          i.Lightning Record Page
+          ii.Lightning Home Page
+          iii.Lightning App page...etc
+  For this we use a Tag
+                        <targets>
+
+                        </targets>
+depending the placement where we use this LWC component we need to define inside the targets tag using target element like below
+                            <target>
+                            
+                            </target>
+So, it looks like
+                  <targets>
+                        <target>lightning__AppPage</target>        // App Page
+                        <target>lightning__RecordPage</target>     // Record Page
+                        <target>lightning__HomePage</target>       // Home Page
+                  </targets> 
+
+
 
   
