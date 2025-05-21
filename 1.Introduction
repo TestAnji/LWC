@@ -63,6 +63,10 @@ So, it looks like
                         <target>lightning__HomePage</target>       // Home Page
                   </targets> 
 
+12. How to create a variable in JS file?
+      It can be created using 'let' keyword
+      It can only be created outside of the class or with in a function.
 
+Note: With in the class we can only create properties, and if you want to use those properties on the html page, we can do that by using "Data binding" 
 
   
