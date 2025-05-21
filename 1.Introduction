@@ -1,7 +1,7 @@
 Introduction:
 -------------
 1.Lightning web component is User Interface framework that is used to develop web pages inside salesforce.
-2.Any web based application, to develop we need 3 parts
+2.Any web based application, to develop we need 3 technologies
                             i. Front end                                ii.Backend                                    iii.Database
 Technologies:        Lightning web component (LWC)                  Apex Programming Language                     Database Language (SOQL)
 
@@ -27,6 +27,6 @@ How the component look like                 Tag that is defined in the HTML     
                           <template>
 
                           </template>
-8.
+8. LWC 
 
   
