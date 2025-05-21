@@ -1,1 +1,32 @@
+Introduction:
+-------------
+1.Lightning web component is User Interface framework that is used to develop web pages inside salesforce.
+2.Any web based application, to develop we need 3 parts
+                            i. Front end                                ii.Backend                                    iii.Database
+Technologies:        Lightning web component (LWC)                  Apex Programming Language                     Database Language (SOQL)
 
+3.LWC framework contains only 3 files
+       i.HTML                                      ii.Javascript                       iii.Metadata                             iii.Cascading Style System (CSS)
+We use a LWC tag to define                  We define the behaviour of LWC      It defines the API version of the               We defined styling to the component
+How the component look like                 Tag that is defined in the HTML     LWC Component and also defined the              so that look and feel looks better.
+(Text, Drop down,Long text..etc)                                                visibility properties of the component
+                                                                                (Like where this component can be placed)
+
+       Structure                                    Functionality                      Placement                                    Desigining
+
+4.The above defined HTML, Javascript and XML files are mandatory to create any LWC component but we have an additional choice to create CSS file as and when we need.
+
+5.As part of LWC learning we need to learn basic things like 
+                            i.LWC Syntax
+                            ii.LWC structure
+6.While creating any lightning web component (LWC) we need to follow camel case format : First Word first letter should be lower case and there after every word first
+  letter should be upper case
+                          Ex:helloWorldComponent, firstLightningWebComponent
+
+7.In the HTML page, we define the component with an open and closed Tag like below
+                          <template>
+
+                          </template>
+8.
+
+  
