@@ -9,7 +9,7 @@ Technologies:        Lightning web component (LWC)                  Apex Program
        i.HTML                                      ii.Javascript                       iii.Metadata                             iii.Cascading Style System (CSS)
 We use a LWC tag to define                  We define the behaviour of LWC      It defines the API version of the               We defined styling to the component
 How the component look like                 Tag that is defined in the HTML     LWC Component and also defined the              so that look and feel looks better.
-(Text, Drop down,Long text..etc)                                                visibility properties of the component
+(Text, Drop down,Long text..etc)            (like how this component will       visibility properties of the component
                                                                                 (Like where this component can be placed)
 
        Structure                                    Functionality                      Placement                                    Desigining
