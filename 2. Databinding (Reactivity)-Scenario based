@@ -33,3 +33,13 @@ export default class HelloWorldComponent extends LightningElement {
 		<target>lightning__HomePage</target>
 	</targets>
 </LightningComponentBundle>
+
+
+Note: When the component is reactive, the entire HTML page will be re-rendered line by line.To understand this functionality let see the concept of renderedcallback
+
+Add this logic to the above code in JS File
+renderedCallback(){
+        console.log('Rendered Callback is Invoked')
+    }
+
+Note: Rendered Callback is invoked only when HTML page is exectuted line by line, otherwise rendered callback will not be Invoked even if it is defined.
