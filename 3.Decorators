@@ -1,0 +1,9 @@
+Decorators:
+-----------
+1.Decorator is always identified and it can start with @ symbol
+2.There are 3 types of Decorators
+          a.@api
+          b.@track
+          c.@wire
+
+1.@api Decorators : 
