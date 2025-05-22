@@ -1,0 +1,35 @@
+Create a new lightning web component, that contains one property and it has a message to display. create a lighnting button, on click of the button the message from the property should be overridden and display
+the message from the lightning button.
+
+1.HTML::
+--------
+<template>
+    <div>
+        {message}
+    </div>
+    <lightning-button variant="base" label="Click Me" onclick={handleClick}></lightning-button>
+</template>
+
+2.JS File
+---------
+import { LightningElement } from 'lwc';
+export default class HelloWorldComponent extends LightningElement {
+    message = 'Hey Hello, How are you?'
+       
+    handleClick(){
+         this.message = 'Welcome to the world';
+    }
+}
+
+3.XML
+-----
+<?xml version="1.0"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+	<apiVersion>62.0</apiVersion>
+	<isExposed>true</isExposed>
+	<targets>
+		<target>lightning__RecordPage</target>
+		<target>lightning__AppPage</target>
+		<target>lightning__HomePage</target>
+	</targets>
+</LightningComponentBundle>
