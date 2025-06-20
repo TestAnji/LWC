@@ -6,4 +6,66 @@ Decorators:
           b.@track
           c.@wire
 
-1.@api Decorators : 
+1.@api Decorators : It is used to make any property or variable public so that it will be visible to other components for communication.
+                     @api decorator is used to communicate between Parent to Child component.
+
+Example : 
+
+Steps:
+  a.
+
+                                                ****Child Component *****
+HTML :
+------
+<template>
+    {defaultmessage}
+</template>
+
+JS File:
+-------
+import { api, LightningElement } from 'lwc';
+
+export default class DecoratorExampleParent extends LightningElement {
+    @api
+    defaultmessage = 'Hey there';
+}
+
+XML:
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+    </targets>
+</LightningComponentBundle>
+
+                                                            ***** Parent Component*****
+HTML:
+----
+<template>
+    <c-decorator-example-child defaultmessage={nowchangemessage}></c-decorator-example-child>
+</template>
+
+JS File:
+--------
+import { LightningElement } from 'lwc';
+
+export default class ExampleDecoratorParent extends LightningElement {
+    nowchangemessage = 'Welcome to Parent Component';
+}
+
+
+XML:
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+    </targets>
+</LightningComponentBundle>
