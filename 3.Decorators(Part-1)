@@ -9,13 +9,15 @@ Decorators:
 1.@api Decorators : It is used to make any property or variable public so that it will be visible to other components for communication.
                      @api decorator is used to communicate between Parent to Child component.
 
+Scenario::: Calling child component data inside parent component??
                                                   Example :  Using Property
                                                   **********&&&*************
 Steps:
   a.Create a child component and make it visible to record pages in salesforce (xml file changes)
-  b. create a property and provide a default value and call that variable inside the HTML Page
-  c.Create a new Parent component and call the child component and then call the property in the HTML page.
-  d.create a new property in parent component JS file and append the value to the child component property
+  b. create a property in child component and provide a default value and call that variable inside the HTML Page of child component.
+  c.Create a new Parent component and call the child component inside parent component along with the property in the Parent HTML page.
+  d.create a new property in parent component JS file and append the value to the child component property.
+
 
                                                 ****Child Component *****
 HTML :
