@@ -9,7 +9,8 @@ Decorators:
 1.@api Decorators : It is used to make any property or variable public so that it will be visible to other components for communication.
                      @api decorator is used to communicate between Parent to Child component.
 
-Scenario::: Calling child component data inside parent component??
+Scenario::: 
+Creating a property in the child and defining the value of property in the parent component
                                                   Example :  Using Property
                                                   **********&&&*************
 Steps:
@@ -19,6 +20,8 @@ Steps:
   d.create a new property in parent component JS file and append the value to the child component property.
 
 
+                                                  Parent to Child
+                                                  ----------------
                                                 ****Child Component *****
 HTML :
 ------
@@ -32,7 +35,7 @@ import { api, LightningElement } from 'lwc';
 
 export default class DecoratorExampleParent extends LightningElement {
     @api
-    defaultmessage = 'Hey there';
+    defaultmessage;
 }
 
 XML:
@@ -51,15 +54,19 @@ XML:
 HTML:
 ----
 <template>
+    <lightning-button label="Submit" onclick={handleClick}></lightning-button>
     <c-decorator-example-child defaultmessage={nowchangemessage}></c-decorator-example-child>
 </template>
 
 JS File:
 --------
-import { LightningElement } from 'lwc';
-
+import { LightningElement, api } from 'lwc';
 export default class ExampleDecoratorParent extends LightningElement {
-    nowchangemessage = 'Welcome to Parent Component';
+    nowchangemessage;
+    handleClick(event){
+        this.nowchangemessage = "Good to see you back";
+    }
+    
 }
 
 
