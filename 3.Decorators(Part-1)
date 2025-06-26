@@ -11,8 +11,9 @@ Decorators:
 
 Scenario::: 
 Creating a property in the child and defining the value of property in the parent component
-                                                  Example :  Using Property
-                                                  **********&&&*************
+                                                  
+                                                  Parent to Child- Scenario - Using Property
+                                                  **********&&&&&&&&&&&&&&&&&&&*************
 Steps:
   a.Create a child component and make it visible to record pages in salesforce (xml file changes)
   b. create a property in child component and provide a default value and call that variable inside the HTML Page of child component.
@@ -20,8 +21,6 @@ Steps:
   d.create a new property in parent component JS file and append the value to the child component property.
 
 
-                                                  Parent to Child
-                                                  ----------------
                                                 ****Child Component *****
 HTML :
 ------
