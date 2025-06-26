@@ -1,1 +1,4 @@
-
+                                                        Child to Parent Communication
+                                                        *******&&&&&&&&&*************
+What are Custom events in LWC?
+         - Custom events are user-defined events that enable components to communicate with each other, particularly when there's a parent-child relationship
