@@ -1,1 +1,69 @@
+                                                  Parent to Child- Scenario - Using Property
+                                                  **********&&&&&&&&&&&&&&&&&&&*************
 
+1.Create a method in the child component and define an input (variable).
+2.Call this child method inside Parent component JS file with the method.
+3.In order to call, child component method insde the parent component we use query selector.
+      Syntax: this.template.querySelector('Child-Component-Name').childComponetMethodName('Your message for the property defined in the child component');
+Note:
+Syntax to define the alret message in JS Fole
+               alert('Generic Message' + propertyName);
+
+                                                      Child Component
+                                                      ---------------
+HTML::
+<template>
+    {defaultmessage}
+</template>
+
+JS::
+import { api, LightningElement } from 'lwc';
+export default class DecoratorExampleParent extends LightningElement {
+    @api
+    defaultmessage;
+    
+    @api
+    childMethod(messages){
+        alert('Button clicked :'+ messages);
+        this.defaultmessage = messages;
+    }
+}
+
+XML::
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+    </targets>
+</LightningComponentBundle>
+
+                                                     Parent Component
+                                                      ---------------
+HTML::
+<template>
+    <lightning-button label="Submit" onclick={handleClick}></lightning-button>
+    <c-decorator-example-child ></c-decorator-example-child>
+</template>
+
+JS::
+import { LightningElement, api } from 'lwc';
+export default class ExampleDecoratorParent extends LightningElement {
+    
+    handleClick(event){
+        this.template.querySelector('c-decorator-example-child').childMethod('Hello. All the best');
+    }
+}
+
+XML::
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+    </targets>
+</LightningComponentBundle>
